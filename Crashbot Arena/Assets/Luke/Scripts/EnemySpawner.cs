@@ -9,27 +9,34 @@ public class EnemySpawner : MonoBehaviour {
     public int spawnFrequency;
     public bool bl_Canspawn;
     private float timer;
+    //Game manager!
+    private GameManager GM;
     // Use this for initialization
     void Start () {
         timer = spawnFrequency;
+        GM = GameObject.Find("GameManager").GetComponent<GameManager>();
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-		if(timer <= 0 )
+        //Check with the GM
+        if (GM.GM_GameState == GameManager.GameState.Playing)
         {
-            if(bl_Canspawn)
+            if (timer <= 0)
             {
-                //do spawning!
-                Spawn();
-                timer = spawnFrequency;
+                if (bl_Canspawn)
+                {
+                    //do spawning!
+                    Spawn();
+                    timer = spawnFrequency;
+                }
             }
-        }
-        else
-        {
-            timer -= Time.deltaTime;
-        }
+            else
+            {
+                timer -= Time.deltaTime;
+            }
+        }    
 	}
     void Spawn()
     {

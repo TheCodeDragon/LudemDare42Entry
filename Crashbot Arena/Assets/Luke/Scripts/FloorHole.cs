@@ -11,11 +11,15 @@ public class FloorHole : MonoBehaviour {
         SR.sprite = HoleSprites[Random.Range(0, HoleSprites.Length)];
 	}
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D colObj)
     {
-        if(collision.gameObject.tag == "Player")
+        if (colObj.gameObject.tag == "Player")
         {
             GameObject.Find("GameManager").SendMessage("DamagePlayer", 200);
+        }
+        else
+        {
+            colObj.SendMessage("TakeDamage", 50);
         }
     }
 }

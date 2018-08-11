@@ -54,9 +54,25 @@ GameObject:
   - component: {fileID: 114044730024301242}
   - component: {fileID: 61029504173580266}
   - component: {fileID: 50628909183975012}
+  - component: {fileID: 114796494320003728}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1934073379886118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4045443472921818}
+  m_Layer: 0
+  m_Name: Muzzle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,6 +93,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4045443472921818
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1934073379886118}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4704514088318492}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4187901922019240
 Transform:
   m_ObjectHideFlags: 1
@@ -129,6 +158,7 @@ Transform:
   - {fileID: 4404318472708966}
   - {fileID: 4619415824180488}
   - {fileID: 4187901922019240}
+  - {fileID: 4045443472921818}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -144,8 +174,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0
+  m_LinearDrag: 1
+  m_AngularDrag: 1
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -191,6 +221,20 @@ MonoBehaviour:
   fl_MoveSpeed: 10
   bl_CanMove: 1
   GM: {fileID: 0}
+--- !u!114 &114796494320003728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1810160323044240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64691cb0882f2e14f990cb99ffccef33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rateOfFire: 2
+  bullet: {fileID: 1279150426295260, guid: cb1a83e3a6895ef429373dee2a9aa81c, type: 2}
+  TR_Muzzle: {fileID: 4045443472921818}
 --- !u!212 &212145919829525974
 SpriteRenderer:
   m_ObjectHideFlags: 1
