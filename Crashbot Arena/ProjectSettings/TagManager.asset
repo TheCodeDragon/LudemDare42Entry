@@ -42,3 +42,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Floor
+    uniqueID: 3575642879
+    locked: 0
+  - name: Holes
+    uniqueID: 908113591
+    locked: 0
+  - name: Scrap
+    uniqueID: 3633127077
+    locked: 0
+  - name: Bots
+    uniqueID: 3538964797
+    locked: 0
+  - name: Player
+    uniqueID: 2174678755
+    locked: 0

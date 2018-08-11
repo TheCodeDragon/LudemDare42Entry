@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour {
         }
     }
     //hurting the player
-    public void Playerdamage(int Damage)
+    public void DamagePlayer(int Damage)
     {
         IN_PlayerHealth -= Damage;
     }
