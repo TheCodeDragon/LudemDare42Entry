@@ -174,5 +174,5 @@ MonoBehaviour:
   - {fileID: 4861117518586018}
   - {fileID: 4253156414437470}
   - {fileID: 4650812541277116}
-  spawnFrequency: 5
+  spawnFrequency: 10
   bl_Canspawn: 1

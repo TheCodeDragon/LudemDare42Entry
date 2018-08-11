@@ -19,6 +19,11 @@ public class GameManager : MonoBehaviour {
     [Header("GameState")]
     [SerializeField]
     public GameState GM_GameState = GameState.Start;
+    [Header("Menu UI")]
+    public GameObject MainMenu;
+    [Header("Game Setup")]
+    public GameObject Player;
+    public Transform PlayerRespawn;
 	// Use this for initialization
 	void Start () {
         //Set up all the things that the game should be set up as when the game is starting!
@@ -78,6 +83,11 @@ public class GameManager : MonoBehaviour {
         //if the health is = to 0 or less than 0, game over.
         if(IN_PlayerHealth <= 0)
         {
+            //Enable the game over menu
+            MainMenu.SetActive(true);
+            //Set play health back up to max
+            IN_PlayerHealth = IN_PlayerMaxHealth;
+            //Switch to GameOver state.
             GM_GameState = GameState.GameOver;
         }
     }
@@ -107,5 +117,15 @@ public class GameManager : MonoBehaviour {
         }      
     }
     #endregion
-
+    #region Menu Functions
+    public void StartGame()
+    {
+        MainMenu.SetActive(false);
+        IN_PlayerScore = 0;
+        Player.transform.position = PlayerRespawn.position;
+        Player.transform.rotation = PlayerRespawn.rotation;
+        //And also, set the game state!
+        GM_GameState = GameState.Playing;
+    }
+    #endregion
 }

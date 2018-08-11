@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114088916005879018}
   m_Layer: 0
   m_Name: Generic_Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,7 +108,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.96, y: 0.96}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -132,9 +132,9 @@ MonoBehaviour:
   AttackRange: 2
   Health: 10
   DestroyScrap: 0
-  Projectile: {fileID: 1793363559103906, guid: 1eac4e02475b71b41b508ca4a1daa785, type: 2}
+  Projectile: {fileID: 1430757441425232, guid: 3813c065cc9df854682aa18ad84cb16e, type: 2}
   SpawnPoint: {fileID: 4371866974505854}
-  AttackCooldown: 1
+  AttackCooldown: 2
   SpawnObject: 1
   Spawnobjects:
   - {fileID: 1552263915890554, guid: 8670124cb63940c49be488e20f54e908, type: 2}
@@ -173,7 +173,7 @@ SpriteRenderer:
   m_SortingLayerID: -756002499
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d7b43a0ac6ec0044a80a22883de3666c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: af1b8a592d021684abf26819eaa42193, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0

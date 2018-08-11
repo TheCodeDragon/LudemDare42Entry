@@ -13,4 +13,11 @@ public class ScrapPile : MonoBehaviour {
         //Randomly set the sprite.
         SR.sprite = ScrapPileSprites[Random.Range(0, ScrapPileSprites.Length)];
     }
+    private void Update()
+    {
+        if (GameObject.Find("GameManager").GetComponent<GameManager>().GM_GameState != GameManager.GameState.Playing)
+        {
+            Destroy(gameObject);
+        }
+    }
 }

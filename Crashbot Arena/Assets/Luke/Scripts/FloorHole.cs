@@ -10,7 +10,13 @@ public class FloorHole : MonoBehaviour {
         SpriteRenderer SR = GetComponent<SpriteRenderer>();
         SR.sprite = HoleSprites[Random.Range(0, HoleSprites.Length)];
 	}
-
+    private void Update()
+    {
+        if(GameObject.Find("GameManager").GetComponent<GameManager>().GM_GameState != GameManager.GameState.Playing)
+        {
+            Destroy(gameObject);
+        }
+    }
     private void OnTriggerEnter2D(Collider2D colObj)
     {
         if (colObj.gameObject.tag == "Player")

@@ -37,12 +37,13 @@ public class EnemyScript : MonoBehaviour {
         //Check the game state!
         if(GM.GM_GameState == GameManager.GameState.Playing)
         {
+            //Health check!
+            DeathCheck();
             //movement
             EnemyMove();
             //attack
             EnemyAttack();
-            //Health check!
-            DeathCheck();
+            
         }
         //Clean up if it's not!
         else
@@ -91,17 +92,22 @@ public class EnemyScript : MonoBehaviour {
         //run out of health?
         if(Health <= 0)
         {
-            //Spawn the backlog!
-            foreach (GameObject spawn in Spawnobjects)
+            Debug.Log(gameObject.name + " has died.");
+            if(SpawnObject)
             {
-                Instantiate(spawn, transform.position, transform.rotation);
+                //Spawn the backlog!
+                foreach (GameObject spawn in Spawnobjects)
+                {
+                    Instantiate(spawn, transform.position, transform.rotation);
+                }
             }
             //Destroy mech
             Destroy(gameObject);
         }
     }
-    void Applydamage(float dmg)
+    public void ApplyDamage(float dmg)
     {
+        Debug.Log(gameObject.name +" has taken damage");
         Health -= dmg;
     }
 }
