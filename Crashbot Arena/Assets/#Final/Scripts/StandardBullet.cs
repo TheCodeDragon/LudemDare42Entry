@@ -16,13 +16,18 @@ public class StandardBullet : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+
+        rbBullet = GetComponent<Rigidbody2D>();
+        goBullet = GetComponent<GameObject>();
+                   
+
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        rbBullet.velocity = transform.forward * speed;
+        rbBullet.velocity = transform.forward * speed; 
 
         float currentAirTime = 0;
 
