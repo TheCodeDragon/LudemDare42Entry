@@ -6,7 +6,8 @@ public class PlayerMovement : MonoBehaviour {
     [Header("Movement Config")]//Header tag!
     public float fl_MoveSpeed;//Movement in absolute, W/S up and down, A/D left and right.
     public bool bl_CanMove;//In case of stun
-	
+    [Header("Links")]
+    public GameManager GM;
 	// Update is called once per frame
 	void Update () {
         //Check if can move
@@ -19,6 +20,16 @@ public class PlayerMovement : MonoBehaviour {
             MoveInworld();
             //And rotate
             LookAtMouse();
+        }
+
+        //Update the bl to the game manager
+        if(GM.GM_GameState == GameManager.GameState.Playing)
+        {
+            bl_CanMove = true;
+        }
+        else
+        {
+            bl_CanMove = false;
         }
 	}
     //Movement Scripts
