@@ -131,7 +131,7 @@ MonoBehaviour:
   MoveSpeed: 3
   AttackRange: 4
   Health: 25
-  DestroyScrap: 1
+  DestroyScrap: 0
   Projectile: {fileID: 1215790488145534, guid: bae94d85b455842419c115a3e62babc0, type: 2}
   SpawnPoint: {fileID: 4186116262665512}
   AttackCooldown: 1
