@@ -168,7 +168,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemies:
-  - {fileID: 1077257005859950, guid: b2fabe5b6ac8b014593bdd37960b5f3d, type: 2}
+  - {fileID: 1969874282472182, guid: 63420334079ead149a7244440d9f6319, type: 2}
+  - {fileID: 1969874282472182, guid: 63420334079ead149a7244440d9f6319, type: 2}
+  - {fileID: 1969874282472182, guid: 63420334079ead149a7244440d9f6319, type: 2}
   Spawnlocations:
   - {fileID: 4839883613957434}
   - {fileID: 4861117518586018}

@@ -43,6 +43,11 @@ public class EnemyScript : MonoBehaviour {
             EnemyMove();
             //attack
             EnemyAttack();
+            //check if the enemy is a scrap destroyer
+            if (DestroyScrap)
+            {
+
+            }
             
         }
         //Clean up if it's not!
@@ -59,7 +64,7 @@ public class EnemyScript : MonoBehaviour {
         //look towards them!
         transform.up = V2_LookDirection;
         //Check if you're in attack range
-        if(Vector2.Distance(transform.position, GO_Player.transform.position) > AttackRange*2)
+        if(Vector2.Distance(transform.position, GO_Player.transform.position) > AttackRange)
         {
             //Move Forward!
             transform.position = Vector2.MoveTowards(transform.position, GO_Player.transform.position, MoveSpeed * Time.deltaTime);
@@ -109,5 +114,20 @@ public class EnemyScript : MonoBehaviour {
     public void ApplyDamage(float dmg)
     {
         Health -= dmg;
+    }
+
+    //Scrap destroyer
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        //check if the enemy is a scrap cleaner
+        if(DestroyScrap)
+        {
+            //check the collision for the scrap tag
+            if (collision.gameObject.tag == "Scrap")
+            {
+                //clean up
+                Destroy(collision.gameObject);
+            }
+        }
     }
 }
