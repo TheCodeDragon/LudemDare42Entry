@@ -15,6 +15,7 @@ public class ScrapPile : MonoBehaviour {
     }
     private void Update()
     {
+        //cleans up on game over.
         if (GameObject.Find("GameManager").GetComponent<GameManager>().GM_GameState != GameManager.GameState.Playing)
         {
             Destroy(gameObject);

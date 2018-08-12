@@ -23,6 +23,7 @@ public class StandardBullet : MonoBehaviour {
 	}
     void Update()
     {
+        //moves the bullet forward over time
         transform.Translate(transform.up * speed, Space.Self);
     }
     // Collision damage and destruction

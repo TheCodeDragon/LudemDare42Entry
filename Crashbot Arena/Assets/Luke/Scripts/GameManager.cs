@@ -118,6 +118,7 @@ public class GameManager : MonoBehaviour {
     }
     #endregion
     #region Menu Functions
+    //Lot of resetting and such!
     public void StartGame()
     {
         MainMenu.SetActive(false);

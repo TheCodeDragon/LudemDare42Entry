@@ -55,16 +55,17 @@ public class EnemyScript : MonoBehaviour {
     {
         //TODO: Make them move smarter?
         //Calculate where the player is
-        Vector2 V2_LookDirection = transform.position - GO_Player.transform.position;
+        Vector2 V2_LookDirection = GO_Player.transform.position - transform.position;
         //look towards them!
         transform.up = V2_LookDirection;
         //Check if you're in attack range
-        if(Vector2.Distance(transform.position, GO_Player.transform.position) > AttackRange)
+        if(Vector2.Distance(transform.position, GO_Player.transform.position) > AttackRange*2)
         {
             //Move Forward!
-            transform.Translate(transform.up * MoveSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, GO_Player.transform.position, MoveSpeed * Time.deltaTime);
         }
     }
+    //Enemy attack function
     void EnemyAttack()
     {
         //if the timer is 0
@@ -92,7 +93,6 @@ public class EnemyScript : MonoBehaviour {
         //run out of health?
         if(Health <= 0)
         {
-            Debug.Log(gameObject.name + " has died.");
             if(SpawnObject)
             {
                 //Spawn the backlog!
@@ -105,9 +105,9 @@ public class EnemyScript : MonoBehaviour {
             Destroy(gameObject);
         }
     }
+    //The function to call to deal damage.
     public void ApplyDamage(float dmg)
     {
-        Debug.Log(gameObject.name +" has taken damage");
         Health -= dmg;
     }
 }

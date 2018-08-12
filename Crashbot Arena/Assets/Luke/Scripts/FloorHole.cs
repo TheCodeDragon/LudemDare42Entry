@@ -12,13 +12,15 @@ public class FloorHole : MonoBehaviour {
 	}
     private void Update()
     {
-        if(GameObject.Find("GameManager").GetComponent<GameManager>().GM_GameState != GameManager.GameState.Playing)
+        //cleans up on game over.
+        if (GameObject.Find("GameManager").GetComponent<GameManager>().GM_GameState != GameManager.GameState.Playing)
         {
             Destroy(gameObject);
         }
     }
     private void OnTriggerEnter2D(Collider2D colObj)
     {
+        //Deal damage to both player and foe alike.
         if (colObj.gameObject.tag == "Player")
         {
             GameObject.Find("GameManager").SendMessage("DamagePlayer", 200);
