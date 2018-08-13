@@ -25,17 +25,20 @@ public class EnemyScript : MonoBehaviour {
     [Header("Death Config")]
     public bool SpawnObject;
     public GameObject[] Spawnobjects;
+    [Header("Audio config")]
+    public AudioSource AS_Walking;
+    public AudioSource AS_Shooting;
 
     // Animator             ---------------------------- animator va ------------------------
-    Animator anim;
+    //Animator anim;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         GO_Player = GameObject.FindGameObjectWithTag("Player");
         GM = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         // get attached animator  --------------------- animator stuff ----------------------
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
     }
 	
 	// Update is called once per frame
@@ -69,22 +72,29 @@ public class EnemyScript : MonoBehaviour {
         {
             //Move Forward!     ------------ Animator Triggers ----------------
             //Since the mech is moving towards the player, is the walking bool true? if not...
-            if(!anim.GetBool("IsWalking"))
-            {
+            //if(!anim.GetBool("IsWalking"))
+            //{
                 //make it so.
-                anim.SetBool("IsWalking", true);
-            }
+                //anim.SetBool("IsWalking", true);
+            //}
             transform.position = Vector2.MoveTowards(transform.position, GO_Player.transform.position, MoveSpeed * Time.deltaTime);
+            //Handle the audio
+            if(!AS_Walking.isPlaying)
+            {
+                AS_Walking.Play();
+            }
         }
         //This means that you're within attack range
         else
         {
             //so, if you're walking still...
-            if (anim.GetBool("IsWalking"))
-            {
-                //Don't.
-                anim.SetBool("IsWalking", false);
-            }
+            //if (anim.GetBool("IsWalking"))
+            //{
+            //Don't.
+            //anim.SetBool("IsWalking", false);
+            //}
+            //And the audio here
+            AS_Walking.Stop();
         }
     }
     //Enemy attack function
@@ -98,6 +108,8 @@ public class EnemyScript : MonoBehaviour {
             {
                 //Attack! Fire Weapons!
                 Instantiate(Projectile, SpawnPoint.position, SpawnPoint.rotation);
+                //And make noise
+                AS_Shooting.PlayOneShot(AS_Shooting.clip);
                 //reset cooldown
                 timer = AttackCooldown;
             }
