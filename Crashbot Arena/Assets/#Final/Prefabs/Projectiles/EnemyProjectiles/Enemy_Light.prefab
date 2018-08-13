@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 58961988004064788}
   - component: {fileID: 114359508941388456}
   m_Layer: 0
-  m_Name: Enemy_Shell 1
+  m_Name: Enemy_Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,8 +69,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Range: 20
-  Speed: 5
-  Damage: 10
+  Speed: 10
+  Damage: 1
   IsPlayerProjectile: 0
   SpawnOnDestroy: 0
   SpawnableObject: {fileID: 0}

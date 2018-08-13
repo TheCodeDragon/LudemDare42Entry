@@ -344,7 +344,7 @@ MonoBehaviour:
   Health: 5
   DefeatScore: 1
   DestroyScrap: 0
-  Projectile: {fileID: 1215790488145534, guid: bae94d85b455842419c115a3e62babc0, type: 2}
+  Projectile: {fileID: 1215790488145534, guid: 4162f7854e6a72046b2ce38276ba156e, type: 2}
   SpawnPoint: {fileID: 4138562431477412}
   AttackCooldown: 1
   SpawnObject: 1

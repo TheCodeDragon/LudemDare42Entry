@@ -223,7 +223,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 633767f08cf27db498cd2fd8d71a9297, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -321,13 +321,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 0
-  AttackRange: 10
-  Health: 20
+  AttackRange: 5
+  Health: 10
   DefeatScore: 1
   DestroyScrap: 0
-  Projectile: {fileID: 1215790488145534, guid: bae94d85b455842419c115a3e62babc0, type: 2}
+  Projectile: {fileID: 1215790488145534, guid: 4162f7854e6a72046b2ce38276ba156e, type: 2}
   SpawnPoint: {fileID: 4520360861011796}
-  AttackCooldown: 1
+  AttackCooldown: 0.5
   SpawnObject: 1
   Spawnobjects:
   - {fileID: 1838524088834582, guid: 078d95c908270314890a4ae8d846de4c, type: 2}
