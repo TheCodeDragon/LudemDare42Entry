@@ -352,6 +352,7 @@ MonoBehaviour:
   - {fileID: 1143912164274498, guid: db9d3510ebbdce249bfdef2021e2c516, type: 2}
   - {fileID: 1143912164274498, guid: db9d3510ebbdce249bfdef2021e2c516, type: 2}
   - {fileID: 1143912164274498, guid: db9d3510ebbdce249bfdef2021e2c516, type: 2}
+  - {fileID: 1388439321746120, guid: 2336375c6d56123438c1bfd885bb076f, type: 2}
   AS_Walking: {fileID: 82889739200026788}
   AS_Shooting: {fileID: 82209966024663660}
 --- !u!212 &212654384098571500

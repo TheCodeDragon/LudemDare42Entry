@@ -350,6 +350,7 @@ MonoBehaviour:
   SpawnObject: 1
   Spawnobjects:
   - {fileID: 1487732393769704, guid: 563513cce3c5d3d43943ad400a581d4b, type: 2}
+  - {fileID: 1388439321746120, guid: 2336375c6d56123438c1bfd885bb076f, type: 2}
   AS_Walking: {fileID: 82201496467308772}
   AS_Shooting: {fileID: 82179718348185794}
 --- !u!212 &212997765098337072

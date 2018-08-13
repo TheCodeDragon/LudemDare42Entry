@@ -419,6 +419,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 29de52f92f4f99541b7c1a9ddcde9400, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &690998820
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4361772746018414, guid: 2336375c6d56123438c1bfd885bb076f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361772746018414, guid: 2336375c6d56123438c1bfd885bb076f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361772746018414, guid: 2336375c6d56123438c1bfd885bb076f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361772746018414, guid: 2336375c6d56123438c1bfd885bb076f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361772746018414, guid: 2336375c6d56123438c1bfd885bb076f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361772746018414, guid: 2336375c6d56123438c1bfd885bb076f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361772746018414, guid: 2336375c6d56123438c1bfd885bb076f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361772746018414, guid: 2336375c6d56123438c1bfd885bb076f, type: 2}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2336375c6d56123438c1bfd885bb076f, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &734974823
 Transform:
   m_ObjectHideFlags: 0
@@ -484,7 +526,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2120288541
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e967ee57574f0ee48bac2adbba81ab40, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
