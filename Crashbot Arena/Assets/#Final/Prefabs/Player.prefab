@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 82210442105707804}
   - component: {fileID: 81549829086577884}
   - component: {fileID: 212362246221855724}
-  - component: {fileID: 95738023127404018}
+  - component: {fileID: 95258480379502356}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -112,10 +112,10 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -224,7 +224,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!95 &95738023127404018
+--- !u!95 &95258480379502356
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -233,7 +233,7 @@ Animator:
   m_GameObject: {fileID: 1237907634925084}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1cdc5eed34cfc8f449c726cc6cb357af, type: 2}
+  m_Controller: {fileID: 9100000, guid: ef8d8e5ab5e497f4aba2a1a5f3d7c2a3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -319,16 +319,16 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2120288541
+  m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: cc51a9ee4452f53439bba661e1ab6052, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0

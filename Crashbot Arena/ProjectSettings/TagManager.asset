@@ -56,9 +56,9 @@ TagManager:
   - name: Bots
     uniqueID: 3538964797
     locked: 0
-  - name: Player
-    uniqueID: 2174678755
-    locked: 0
   - name: Projectiles
     uniqueID: 922933877
+    locked: 0
+  - name: Player
+    uniqueID: 2174678755
     locked: 0
