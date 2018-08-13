@@ -10,7 +10,6 @@ public class PlayerMovement : MonoBehaviour {
     public GameManager GM;
     [Header("Audio")]
     public AudioSource AS_Player;
-    public bool isWalking;
 	// Update is called once per frame
 	void Update () {
         //Check if can move
@@ -66,7 +65,6 @@ public class PlayerMovement : MonoBehaviour {
             AS_Player.Stop();
         }
     }
-
     void LookAtMouse()
     {
         //Get Mouse position on screen

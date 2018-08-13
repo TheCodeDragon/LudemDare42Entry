@@ -27,7 +27,7 @@ public class EnemyScript : MonoBehaviour {
     public GameObject[] Spawnobjects;
 
     // Animator             ---------------------------- animator va ------------------------
-    //Animator anim;
+    Animator anim;
 
 	// Use this for initialization
 	void Start () {
@@ -35,7 +35,7 @@ public class EnemyScript : MonoBehaviour {
         GM = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         // get attached animator  --------------------- animator stuff ----------------------
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 	
 	// Update is called once per frame
@@ -64,16 +64,27 @@ public class EnemyScript : MonoBehaviour {
         Vector2 V2_LookDirection = GO_Player.transform.position - transform.position;
         //look towards them!
         transform.up = V2_LookDirection;
-        //Check if you're in attack range
-        if (Vector2.Distance(transform.position, GO_Player.transform.position) > AttackRange);
+        //Check if you're outside attack range
+        if (Vector2.Distance(transform.position, GO_Player.transform.position) > AttackRange)
         {
             //Move Forward!     ------------ Animator Triggers ----------------
-            //anim.SetBool("IsWalking", true);
-            
+            //Since the mech is moving towards the player, is the walking bool true? if not...
+            if(!anim.GetBool("IsWalking"))
+            {
+                //make it so.
+                anim.SetBool("IsWalking", true);
+            }
             transform.position = Vector2.MoveTowards(transform.position, GO_Player.transform.position, MoveSpeed * Time.deltaTime);
-            //anim.SetBool("IsWalking", false);
-            
-
+        }
+        //This means that you're within attack range
+        else
+        {
+            //so, if you're walking still...
+            if (anim.GetBool("IsWalking"))
+            {
+                //Don't.
+                anim.SetBool("IsWalking", false);
+            }
         }
     }
     //Enemy attack function
