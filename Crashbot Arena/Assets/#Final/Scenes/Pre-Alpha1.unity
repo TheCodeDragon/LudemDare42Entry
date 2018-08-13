@@ -237,6 +237,47 @@ Prefab:
       propertyPath: m_FontData.m_BestFit
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114606881908081728, guid: 5e44709525d20334fb88a63115ebc383,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a1cd11ba3d3684d4f91f84a1f28353e7,
+        type: 3}
+    - target: {fileID: 114606881908081728, guid: 5e44709525d20334fb88a63115ebc383,
+        type: 2}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114606881908081728, guid: 5e44709525d20334fb88a63115ebc383,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114606881908081728, guid: 5e44709525d20334fb88a63115ebc383,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114606881908081728, guid: 5e44709525d20334fb88a63115ebc383,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114716601351999712, guid: 5e44709525d20334fb88a63115ebc383,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114716601351999712, guid: 5e44709525d20334fb88a63115ebc383,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114716601351999712, guid: 5e44709525d20334fb88a63115ebc383,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e44709525d20334fb88a63115ebc383, type: 2}
   m_IsPrefabParent: 0
