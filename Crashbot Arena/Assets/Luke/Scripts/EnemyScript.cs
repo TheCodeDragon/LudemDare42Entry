@@ -25,11 +25,17 @@ public class EnemyScript : MonoBehaviour {
     [Header("Death Config")]
     public bool SpawnObject;
     public GameObject[] Spawnobjects;
+
+    // Animator             ---------------------------- animator va ------------------------
+    //Animator anim;
+
 	// Use this for initialization
 	void Start () {
         GO_Player = GameObject.FindGameObjectWithTag("Player");
         GM = GameObject.Find("GameManager").GetComponent<GameManager>();
 
+        // get attached animator  --------------------- animator stuff ----------------------
+        //anim = GetComponent<Animator>();
     }
 	
 	// Update is called once per frame
@@ -59,10 +65,15 @@ public class EnemyScript : MonoBehaviour {
         //look towards them!
         transform.up = V2_LookDirection;
         //Check if you're in attack range
-        if(Vector2.Distance(transform.position, GO_Player.transform.position) > AttackRange)
+        if (Vector2.Distance(transform.position, GO_Player.transform.position) > AttackRange);
         {
-            //Move Forward!
+            //Move Forward!     ------------ Animator Triggers ----------------
+            //anim.SetBool("IsWalking", true);
+            
             transform.position = Vector2.MoveTowards(transform.position, GO_Player.transform.position, MoveSpeed * Time.deltaTime);
+            //anim.SetBool("IsWalking", false);
+            
+
         }
     }
     //Enemy attack function
