@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rateOfFire: 1
-  bullet: {fileID: 1119503042458478, guid: 02da78ec5f5f6f04b930ed881eeb8af0, type: 2}
+  bullet: {fileID: 1077483848749102, guid: 3d06917ffecd83e4f87b4e9ac1d0cf14, type: 2}
   TR_Muzzle: {fileID: 4721213703149902}
   IsSelected: 1
   MechGFX: {fileID: 0}
@@ -284,7 +284,6 @@ MonoBehaviour:
   bl_CanMove: 1
   GM: {fileID: 0}
   AS_Player: {fileID: 82210442105707804}
-  isWalking: 0
 --- !u!114 &114962547200287008
 MonoBehaviour:
   m_ObjectHideFlags: 1

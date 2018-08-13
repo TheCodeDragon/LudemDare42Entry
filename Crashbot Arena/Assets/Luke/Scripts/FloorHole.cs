@@ -20,14 +20,10 @@ public class FloorHole : MonoBehaviour {
     }
     private void OnTriggerEnter2D(Collider2D colObj)
     {
-        //Deal damage to both player and foe alike.
+        //Deal damage to player
         if (colObj.gameObject.tag == "Player")
         {
             GameObject.Find("GameManager").SendMessage("DamagePlayer", 200);
-        }
-        else
-        {
-            colObj.SendMessage("TakeDamage", 50);
         }
     }
 }

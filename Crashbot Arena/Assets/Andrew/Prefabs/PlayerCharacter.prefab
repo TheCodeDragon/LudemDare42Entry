@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 212889067764696058}
   - component: {fileID: 95069368064225152}
   m_Layer: 0
-  m_Name: Player
+  m_Name: PlayerCharacter
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -213,7 +213,6 @@ MonoBehaviour:
   bl_CanMove: 1
   GM: {fileID: 0}
   AS_Player: {fileID: 0}
-  isWalking: 0
 --- !u!212 &212239499544554392
 SpriteRenderer:
   m_ObjectHideFlags: 1
