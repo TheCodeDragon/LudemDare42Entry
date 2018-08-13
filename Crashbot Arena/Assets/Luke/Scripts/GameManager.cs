@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour {
     public GameState GM_GameState = GameState.Start;
     [Header("Menu UI")]
     public GameObject MainMenu;
+    public GameObject GameUI;
     [Header("Game Setup")]
     public GameObject Player;
     public Transform PlayerRespawn;
@@ -122,6 +123,7 @@ public class GameManager : MonoBehaviour {
     public void StartGame()
     {
         MainMenu.SetActive(false);
+        GameUI.SetActive(true);
         IN_PlayerScore = 0;
         Player.transform.position = PlayerRespawn.position;
         Player.transform.rotation = PlayerRespawn.rotation;
