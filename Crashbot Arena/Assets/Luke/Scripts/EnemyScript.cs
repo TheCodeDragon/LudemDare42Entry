@@ -15,6 +15,7 @@ public class EnemyScript : MonoBehaviour {
     public float MoveSpeed;
     public float AttackRange;
     public float Health;
+    public int DefeatScore;
     [Header("Specials")]
     public bool DestroyScrap;
     [Header("Attack Config")]
@@ -42,13 +43,7 @@ public class EnemyScript : MonoBehaviour {
             //movement
             EnemyMove();
             //attack
-            EnemyAttack();
-            //check if the enemy is a scrap destroyer
-            if (DestroyScrap)
-            {
-
-            }
-            
+            EnemyAttack();        
         }
         //Clean up if it's not!
         else
@@ -98,14 +93,16 @@ public class EnemyScript : MonoBehaviour {
         //run out of health?
         if(Health <= 0)
         {
-            if(SpawnObject)
+            //Spawn the backlog if it spawns stuff
+            if (SpawnObject)
             {
-                //Spawn the backlog!
                 foreach (GameObject spawn in Spawnobjects)
                 {
                     Instantiate(spawn, transform.position, transform.rotation);
                 }
             }
+            //add the score to the GM
+            GM.ScoreIncrease(DefeatScore);
             //Destroy mech
             Destroy(gameObject);
         }

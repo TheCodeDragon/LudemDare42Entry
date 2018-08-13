@@ -302,15 +302,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemies:
-  - {fileID: 1969874282472182, guid: 63420334079ead149a7244440d9f6319, type: 2}
-  - {fileID: 1969874282472182, guid: 63420334079ead149a7244440d9f6319, type: 2}
-  - {fileID: 1969874282472182, guid: 63420334079ead149a7244440d9f6319, type: 2}
+  - {fileID: 1077257005859950, guid: b2fabe5b6ac8b014593bdd37960b5f3d, type: 2}
+  - {fileID: 1077257005859950, guid: b2fabe5b6ac8b014593bdd37960b5f3d, type: 2}
+  - {fileID: 1077257005859950, guid: b2fabe5b6ac8b014593bdd37960b5f3d, type: 2}
   Spawnlocations:
   - {fileID: 4330191895481324}
   - {fileID: 4158720760543880}
   - {fileID: 4377082375894506}
   - {fileID: 4722355639886596}
-  spawnFrequency: 10
+  spawnFrequency: 5
   bl_Canspawn: 1
 --- !u!212 &212160421289805944
 SpriteRenderer:

@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour {
     public int IN_PlayerMaxHealth;
     [Header("PlayerScore")]
     public int IN_PlayerScore;
+    public int IN_PlayerHighScore;
     //Gamestate Enum
     public enum GameState
     {
@@ -29,7 +30,11 @@ public class GameManager : MonoBehaviour {
 	void Start () {
         //Set up all the things that the game should be set up as when the game is starting!
         IN_PlayerHealth = IN_PlayerMaxHealth;
+        //Sets the Game start to the main menu
         GM_GameState = GameState.Start;
+
+        //Handles the high score!
+        ScoreChecker();
 	}
 	
 	// Update is called once per frame
@@ -90,6 +95,8 @@ public class GameManager : MonoBehaviour {
             IN_PlayerHealth = IN_PlayerMaxHealth;
             //Switch to GameOver state.
             GM_GameState = GameState.GameOver;
+            //Handles the high score!
+            ScoreChecker();
         }
     }
     //Healing the player
@@ -112,10 +119,7 @@ public class GameManager : MonoBehaviour {
     //Score increase
     public void ScoreIncrease(int scoreplus)
     {
-        if(GM_GameState == GameState.Playing)
-        {
-            IN_PlayerScore += scoreplus;
-        }      
+        IN_PlayerScore += scoreplus;      
     }
     #endregion
     #region Menu Functions
@@ -129,6 +133,30 @@ public class GameManager : MonoBehaviour {
         Player.transform.rotation = PlayerRespawn.rotation;
         //And also, set the game state!
         GM_GameState = GameState.Playing;
+    }
+    public void ScoreChecker()
+    {
+        //Script deals with player prefs, which are values that are saved externally to the game.
+        //This means, they'll be saved betwen play sessions, so good for a high score.
+
+        //Check if the high score has been set yet
+        if (!PlayerPrefs.HasKey("HighScore"))
+        {
+            //update with the current score if it hasn't.
+            PlayerPrefs.SetInt("HighScore", IN_PlayerScore);
+        }
+        //if it has
+        else
+        {
+            //Check if the current score is better than the high score
+            if(IN_PlayerScore > PlayerPrefs.GetInt("HighScore"))
+            {
+                //if it is, update to the new high score!
+                PlayerPrefs.SetInt("HighScore", IN_PlayerScore);
+            }
+        }
+        //And finally, update the high score to the Playerpref
+        IN_PlayerHighScore = PlayerPrefs.GetInt("HighScore");
     }
     #endregion
 }

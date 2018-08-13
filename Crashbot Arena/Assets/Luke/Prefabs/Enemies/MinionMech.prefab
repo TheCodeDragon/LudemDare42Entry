@@ -130,12 +130,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed: 3
   AttackRange: 4
-  Health: 25
+  Health: 5
+  DefeatScore: 5
   DestroyScrap: 0
   Projectile: {fileID: 1215790488145534, guid: bae94d85b455842419c115a3e62babc0, type: 2}
   SpawnPoint: {fileID: 4416336709104420}
   AttackCooldown: 1
-  SpawnObject: 0
+  SpawnObject: 1
   Spawnobjects:
   - {fileID: 1552263915890554, guid: 8670124cb63940c49be488e20f54e908, type: 2}
 --- !u!212 &212419718209058260
