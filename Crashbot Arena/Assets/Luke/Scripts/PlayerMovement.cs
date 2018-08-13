@@ -8,6 +8,9 @@ public class PlayerMovement : MonoBehaviour {
     public bool bl_CanMove;//In case of stun
     [Header("Links")]
     public GameManager GM;
+    [Header("Audio")]
+    public AudioSource AS_Player;
+    public bool isWalking;
 	// Update is called once per frame
 	void Update () {
         //Check if can move
@@ -20,6 +23,8 @@ public class PlayerMovement : MonoBehaviour {
             MoveInworld();
             //And rotate
             LookAtMouse();
+            //And audio
+            SoundwhenMoving();
         }
 
         //Update the bl to the game manager
@@ -47,7 +52,20 @@ public class PlayerMovement : MonoBehaviour {
         //apply the transform to worldspace
         transform.Translate(V2Movement * fl_MoveSpeed * Time.deltaTime, Space.World);
     }
-
+    void SoundwhenMoving()
+    {
+        if(Input.GetButton("Vertical")||Input.GetButton("Horizontal"))
+        {
+            if(!AS_Player.isPlaying)
+            {
+                AS_Player.PlayOneShot(AS_Player.clip);
+            }
+        }
+        else
+        {
+            AS_Player.Stop();
+        }
+    }
 
     void LookAtMouse()
     {

@@ -302,15 +302,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemies:
-  - {fileID: 1077257005859950, guid: b2fabe5b6ac8b014593bdd37960b5f3d, type: 2}
-  - {fileID: 1077257005859950, guid: b2fabe5b6ac8b014593bdd37960b5f3d, type: 2}
-  - {fileID: 1077257005859950, guid: b2fabe5b6ac8b014593bdd37960b5f3d, type: 2}
+  - {fileID: 1548375371997666, guid: 4fe924ae2fc0a2d40a50e74e0ef19e8b, type: 2}
+  - {fileID: 1548375371997666, guid: 4fe924ae2fc0a2d40a50e74e0ef19e8b, type: 2}
+  - {fileID: 1548375371997666, guid: 4fe924ae2fc0a2d40a50e74e0ef19e8b, type: 2}
+  - {fileID: 1548375371997666, guid: 4fe924ae2fc0a2d40a50e74e0ef19e8b, type: 2}
+  - {fileID: 1579969241811464, guid: 55d46514de0f9d34c91da7d3d819023e, type: 2}
+  - {fileID: 1579969241811464, guid: 55d46514de0f9d34c91da7d3d819023e, type: 2}
+  - {fileID: 1473969853839970, guid: 3ac882aa6e9a20f4d9e45f7d5e89f89d, type: 2}
+  - {fileID: 1289351687819888, guid: 0f0817e58b9198c468f81e6a0fb1d9d1, type: 2}
+  - {fileID: 1970579199814320, guid: 3a974c0d21d574443b4ef007b8b018f8, type: 2}
+  - {fileID: 1473969853839970, guid: 3ac882aa6e9a20f4d9e45f7d5e89f89d, type: 2}
+  - {fileID: 1970579199814320, guid: 3a974c0d21d574443b4ef007b8b018f8, type: 2}
   Spawnlocations:
   - {fileID: 4330191895481324}
   - {fileID: 4158720760543880}
   - {fileID: 4377082375894506}
   - {fileID: 4722355639886596}
-  spawnFrequency: 5
+  spawnFrequency: 10
   bl_Canspawn: 1
 --- !u!212 &212160421289805944
 SpriteRenderer:
