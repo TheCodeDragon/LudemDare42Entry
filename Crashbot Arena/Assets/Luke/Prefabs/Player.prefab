@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 114464804080572130}
   - component: {fileID: 61971608320691128}
   - component: {fileID: 50099319621428718}
+  - component: {fileID: 114806501338423984}
   - component: {fileID: 114672532601999336}
   m_Layer: 0
   m_Name: Player
@@ -175,6 +176,22 @@ MonoBehaviour:
   rateOfFire: 1
   bullet: {fileID: 1119503042458478, guid: 02da78ec5f5f6f04b930ed881eeb8af0, type: 2}
   TR_Muzzle: {fileID: 4784018744728950}
+  IsSelected: 0
+  MechGFX: {fileID: 0}
+  UIGFX: {fileID: 0}
+--- !u!114 &114806501338423984
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1571447849710900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9131d1f80b1711a4e93d45fbe268b22f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Guns:
+  - {fileID: 114672532601999336}
 --- !u!212 &212917790793021300
 SpriteRenderer:
   m_ObjectHideFlags: 1

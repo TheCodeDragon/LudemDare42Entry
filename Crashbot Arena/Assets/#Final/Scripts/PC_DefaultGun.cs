@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class PC_DefaultGun : MonoBehaviour {
     // Stats for shoosting
+    [Header("Shooting Config")]
     public float rateOfFire = 2;
-    private float timer;
-    // Bullet GO
     public GameObject bullet;
     public Transform TR_Muzzle;
+    [Header("Weapon Select config")]
+    public bool IsSelected;
+    //Weapon graphic
+    public GameObject MechGFX;
+    //weapon on the UI
+    public GameObject UIGFX;
+    //reload timer
+    private float timer;
+    //link to GM
     private GameManager GM;
     void Start()
     {
@@ -30,19 +38,38 @@ public class PC_DefaultGun : MonoBehaviour {
         //if the timer is 0
         if (timer <= 0)
         {
-            //check if player shoots
-            if (Input.GetButtonDown("Fire1"))
+            //Check that it's selected
+            if(IsSelected)
             {
-                //Attack! Fire Weapon!
-                Instantiate(bullet, TR_Muzzle.position, TR_Muzzle.rotation);
-                //reset cooldown
-                timer = rateOfFire;
+                //check if player shoots
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    //Attack! Fire Weapon!
+                    Instantiate(bullet, TR_Muzzle.position, TR_Muzzle.rotation);
+                    //reset cooldown
+                    timer = rateOfFire;
+                }
             }
         }
         //timer count down
         else
         {
             timer -= Time.deltaTime;
+        }
+    }
+    void UpdateVisuals()
+    {
+        //if the weapon isn't selected, make it invisible
+        if(!IsSelected)
+        {
+            MechGFX.SetActive(false);
+            UIGFX.SetActive(false);
+        }
+        //if it is, make it visible.
+        else
+        {
+            MechGFX.SetActive(false);
+            UIGFX.SetActive(false);
         }
     }
 
