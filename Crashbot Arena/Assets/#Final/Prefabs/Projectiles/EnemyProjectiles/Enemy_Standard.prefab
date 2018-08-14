@@ -72,8 +72,9 @@ MonoBehaviour:
   Speed: 5
   Damage: 10
   IsPlayerProjectile: 0
-  SpawnOnDestroy: 0
-  SpawnableObject: {fileID: 0}
+  SpawnOnDestroy: 1
+  SpawnableObjects:
+  - {fileID: 1388439321746120, guid: 2336375c6d56123438c1bfd885bb076f, type: 2}
 --- !u!212 &212548841082910754
 SpriteRenderer:
   m_ObjectHideFlags: 1

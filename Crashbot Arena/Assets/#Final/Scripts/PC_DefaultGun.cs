@@ -14,6 +14,8 @@ public class PC_DefaultGun : MonoBehaviour {
     public GameObject MechGFX;
     //weapon on the UI
     public GameObject UIGFX;
+    [Header("Audio")]
+    public AudioSource AS_FireSound;
     //reload timer
     private float timer;
     //link to GM
@@ -46,6 +48,8 @@ public class PC_DefaultGun : MonoBehaviour {
                 {
                     //Attack! Fire Weapon!
                     Instantiate(bullet, TR_Muzzle.position, TR_Muzzle.rotation);
+                    //Make noise
+                    AS_FireSound.PlayOneShot(AS_FireSound.clip);
                     //reset cooldown
                     timer = rateOfFire;
                 }

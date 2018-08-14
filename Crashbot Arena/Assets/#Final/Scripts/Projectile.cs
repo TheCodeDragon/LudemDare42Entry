@@ -9,7 +9,7 @@ public class Projectile : MonoBehaviour {
     public float Damage;
     public bool IsPlayerProjectile;
     public bool SpawnOnDestroy;
-    public GameObject SpawnableObject;
+    public GameObject[] SpawnableObjects;
 	// Use this for initialization
 	void Start () {
         Destroy(gameObject, Range);
@@ -37,6 +37,13 @@ public class Projectile : MonoBehaviour {
             }
         }
         //TODO add posibility of spawning something
+        if(SpawnOnDestroy)
+        {
+            foreach (GameObject Spawn in SpawnableObjects)
+            {
+                Instantiate(Spawn, transform.position, transform.rotation);
+            }
+        }
         Destroy(gameObject);
     }
 }

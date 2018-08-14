@@ -632,7 +632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackingTarget: {fileID: 2030170304}
   ZOffset: -5
---- !u!1001 &1553540808
+--- !u!1001 &1598377362
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -676,16 +676,6 @@ Prefab:
       propertyPath: GM
       value: 
       objectReference: {fileID: 2128202689}
-    - target: {fileID: 82210442105707804, guid: 99e32274e8e9105459eefcc467921f4d,
-        type: 2}
-      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
-      value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 82210442105707804, guid: 99e32274e8e9105459eefcc467921f4d,
-        type: 2}
-      propertyPath: MaxDistance
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99e32274e8e9105459eefcc467921f4d, type: 2}
   m_IsPrefabParent: 0
@@ -693,7 +683,7 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 1237907634925084, guid: 99e32274e8e9105459eefcc467921f4d,
     type: 2}
-  m_PrefabInternal: {fileID: 1553540808}
+  m_PrefabInternal: {fileID: 1598377362}
 --- !u!114 &2128202689 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114471287662415706, guid: 5e44709525d20334fb88a63115ebc383,
