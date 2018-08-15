@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponSelectScript : MonoBehaviour {
     public PC_DefaultGun[] Guns;
-    private int WeaponIndex = 0;
+    public int WeaponIndex = 0;
 	// Use this for initialization
 	void Start () {
         //disable the rest

@@ -32,6 +32,8 @@ public class PC_DefaultGun : MonoBehaviour {
         {
             PCShoot();
         }
+        //update the visuals
+        UpdateVisuals();
     }
 
     // PC shoot script
@@ -72,8 +74,8 @@ public class PC_DefaultGun : MonoBehaviour {
         //if it is, make it visible.
         else
         {
-            MechGFX.SetActive(false);
-            UIGFX.SetActive(false);
+            MechGFX.SetActive(true);
+            UIGFX.SetActive(true);
         }
     }
 
